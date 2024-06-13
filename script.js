@@ -1,7 +1,7 @@
 // U78784426
 // Defining a function that loads CSV file data
 document.addEventListener('DOMContentLoaded', function() {
-    d3.dsv(",", "data/purchase_orders.csv").then(function(data) {
+    d3.dsv(",", 'data/purchase_orders.csv').then(function(data) {
         const ul = d3.select("#purchase-orders");
 
 // Dynamic creation of <li> elements for each purchase order
