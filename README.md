@@ -1,1 +1,1 @@
-# Project-10
+This code creates a web application that allows for easy access to purchase order data from a sepcific CSV file. The data entry will generate a new element with customer details including name, purhcase amount, and order identification. The HTML allows for all of the data to be in one spot without confusion. 
