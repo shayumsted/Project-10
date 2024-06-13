@@ -1,4 +1,5 @@
 // U78784426
+// Defining a function that loads CSV file data
 document.addEventListener('DOMContentLoaded', function() {
     d3.dsv(",", "data/purchase_orders.csv").then(function(data) {
         const ul = d3.select("#purchase-orders");
@@ -8,7 +9,9 @@ document.addEventListener('DOMContentLoaded', function() {
             .data(data)
             .enter()
             .append("li")
-// Format texxt content for each <li> element.
-            .text(d => `${d.customerName} - Order ID: ${d.orderId} - Purchase Amount: $${d.purchaseAmount}`);
-    }).catch(function(error) {console.error('Error loading the CSV file:', error);});
-});
+            .text(function(d) {
+// Format text content for each <li> element
+            return `${d.customerName} - Order ID: ${d.orderId} - Purchase Amount: $${d.purchaseAmount}`;
+    });
+}).catch(function(error) {console.error('Error loading the CSV file:', error);});
+})
